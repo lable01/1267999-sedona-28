@@ -2,11 +2,148 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <!--Начало header-->
+    <header class="header-inner">
+      <!--Начало nav-->
+      <nav class="nav-inner">
+        <a><img src="img/logo.svg" alt="logotype Sedona" width="138" height="70"></a>
+        <ul>
+          <li><a href="blank.html">Информация</a></li>
+          <li><a href="blank.html">Фото и видео</a></li>
+          <li><a href="blank.html">Карта штата</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+      <!--Конец nav-->
+    </header>
+    <!--Закончен header-->
+    <!--Начало main-->
+    <main class="main-inner">
+      <h1 class="visually-hidden">город Sedona</h1>
+      <div class="welcome-sedona">
+        <a>
+          <img src="img/welcome.svg" alt="welcome Sedona" width="456" height="350">
+        </a>
+      </div>
+      <section class="reasons">
+        <p>Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p><span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span></p>
+      </section>
+      <section class="reason-one">
+        <div class="one">
+          <h2>Настоящий городок</h2>
+          <p>— №1 —</p>
+          <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <div class="photo">
+          <a href="#">
+            <img src="/img/reason-one-photo.jpg" alt="Информационный центр" width="800" height="256">
+          </a>
+        </div>
+      </section>
+      <section class="life">
+        <div class="housing">
+          <img src="/img/housing.svg" alt="Дом" width="74" height="72">
+          <h2>Жилье</h2>
+          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+        </div>
+        <div class="food">
+          <img src="/img/food.svg" alt="Еда" width="74" height="70">
+          <h2>Еда</h2>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="souvenirs">
+          <img src="/img/souvenirs.svg" alt="Сувениры" width="64" height="76">
+          <h2>Сувениры</h2>
+          <p>Не только китайского, но и местного производства!</p>
+        </div>
+      </section>
+      <section class="reason-two">
+        <div class="photo">
+          <a href="#">
+            <img src="/img/reason-one-photo.jpg" alt="Мост дьявола" width="800" height="256">
+          </a>
+        </div>
+        <div class="two">
+          <h2>Там есть мост дьявола</h2>
+          <p>— №2 —</p>
+          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        </div>
+      </section>
+      <section class="other-quistions">
+        <div class="territory">
+          <h2>Небольшая площадь</h2>
+          <p>— №3 —</p>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="road">
+          <h2>Красивая дорога</h2>
+          <p>— №4 —</p>
+          <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+        </div>
+        <div class="tourist">
+          <h2>Мало туристов</h2>
+          <p>— №5 —</p>
+          <p>Большинство едет в гранд каньон и толпится там</p>
+        </div>
+      </section>
+      <section class="interest">
+        <p><span>Заинтересовались?</span></p>
+        <p>Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
+      </section>
+      <section class="search">
+        <!--Начало form-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Поиск гостиницы в Седоне</legend>
+              <label for="date-arrival">Дата заезда:</label>
+                <p>
+                  <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017" required>
+                  <img src="/img/calendar-arrival.png" alt="Календарь" width="21" height="23">
+                </p>
+              <label for="date-departure">Дата выезда:</label>
+                <p>
+                  <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017" required>
+                  <img src="/img/calendar-departure.png" alt="Календарь" width="21" height="23">
+                </p>
+              <label for="adult-number">Взрослые:</label>
+                <img src="/img/switch.svg" alt="Переключатель" width="87" height="11">
+                <input type="text" id="adult-number" name="adult-number" value="2" required>
+              <label for="children-number">Дети:</label>
+                <img src="/img/switch.svg" alt="Переключатель" width="87" height="11">
+                <input type="text" id="children-number" name="children-number" value="0" required>
+              <button type="submit">Найти</button>
+          </fieldset>
+        </form>
+        <!--Конец form-->
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="/img/map.png" alt="карта штата" width="1199" height="594">
+      </section>   
+    </main>
+    <!--Кoнец main-->
+    <!--Начало footer-->
+    <footer class="footer-inner">
+      <div class="telephone-number">
+        <p>#VisitSedona</p>
+        <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
+      </div>
+      <div class="social">
+        <a href="#"><img src="/img/twitter.svg" alt="twitter" width="46" height="48"></a>
+        <a href="#"><img src="/img/facebook.svg" alt="facebook" width="46" height="48"></a>
+        <a href="#"><img src="/img/youtube.svg" alt="youtube" width="46" height="48"></a>
+      </div>
+      <div class="assist">
+        <p>Website by</p>
+        <a href="https://htmlacademy.ru"><img src="/img/logo-htmlacademy.svg" alt="html academy" width="114" height="40"></a>
+      </div>
+    </footer>
+    <!--Конец footer-->
+    <p class="visually-hidden">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
   </body>
 </html>
