@@ -12,9 +12,9 @@
       <nav class="nav-inner">
         <a><img src="img/logo.svg" alt="logotype Sedona" width="138" height="70"></a>
         <ul>
-          <li><a href="blank.html">Информация</a></li>
-          <li><a href="blank.html">Фото и видео</a></li>
-          <li><a href="blank.html">Карта штата</a></li>
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
           <li><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
@@ -96,27 +96,30 @@
         <p>Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
       </section>
       <section class="search">
+        <h2 class="visually-hidden">Поиск</h2>
         <!--Начало form-->
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Поиск гостиницы в Седоне</legend>
-              <label for="date-arrival">Дата заезда:</label>
-                <p>
-                  <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017" required>
-                  <img src="/img/calendar-arrival.png" alt="Календарь" width="21" height="23">
-                </p>
-              <label for="date-departure">Дата выезда:</label>
-                <p>
-                  <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017" required>
-                  <img src="/img/calendar-departure.png" alt="Календарь" width="21" height="23">
-                </p>
-              <label for="adult-number">Взрослые:</label>
-                <img src="/img/switch.svg" alt="Переключатель" width="87" height="11">
+              <div class="date-arrival">
+                <label for="date-arrival">Дата заезда:</label>
+                <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017" required>
+              </div>
+              <div class="date-departure">
+                <label for="date-departure">Дата выезда:</label>
+                <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017" required>
+              </div>
+              <div class="adult-number">
+                <label for="adult-number">Взрослые:</label>
                 <input type="text" id="adult-number" name="adult-number" value="2" required>
-              <label for="children-number">Дети:</label>
-                <img src="/img/switch.svg" alt="Переключатель" width="87" height="11">
+              </div>
+              <div class="children-number">
+                <label for="children-number">Дети:</label>
                 <input type="text" id="children-number" name="children-number" value="0" required>
-              <button type="submit">Найти</button>
+              </div>
+              <div class="button">
+                <button type="submit">Найти</button>
+              </div>
           </fieldset>
         </form>
         <!--Конец form-->
@@ -134,9 +137,9 @@
         <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
       </div>
       <div class="social">
-        <a href="#"><img src="/img/twitter.svg" alt="twitter" width="46" height="48"></a>
-        <a href="#"><img src="/img/facebook.svg" alt="facebook" width="46" height="48"></a>
-        <a href="#"><img src="/img/youtube.svg" alt="youtube" width="46" height="48"></a>
+        <a href="#">Twiter</a>
+        <a href="#">Facebook</a>
+        <a href="#">Youtube</a>
       </div>
       <div class="assist">
         <p>Website by</p>
