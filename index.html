@@ -2,36 +2,44 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="/css/normolize.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
   </head>
   <body>
     <!--Начало header-->
     <header class="header-inner">
       <!--Начало nav-->
       <nav class="nav-inner">
-        <a><img src="img/logo.svg" alt="logotype Sedona" width="138" height="70"></a>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="catalog.html">Гостиницы</a></li>
-        </ul>
+        <a class="logo-inner">
+          <img src="img/logo.svg" alt="logotype Sedona" width="138" height="70">
+        </a>
+        <div class="main-nav">
+          <ul class="list">
+            <li class="item"><a href="#">Информация</a></li>
+            <li class="item"><a href="#">Фото и видео</a></li>
+            <li class="item"><a href="#">Карта штата</a></li>
+            <li class="item"><a href="catalog.html">Гостиницы</a></li>
+          </ul>
+        </div>
       </nav>
       <!--Конец nav-->
     </header>
     <!--Закончен header-->
     <!--Начало main-->
     <main class="main-inner">
-      <h1 class="visually-hidden">город Sedona</h1>
-      <div class="welcome-sedona">
-        <a>
-          <img src="img/welcome.svg" alt="welcome Sedona" width="456" height="350">
-        </a>
-      </div>
+      <section class="background"> 
+        <h1 class="visually-hidden">город Sedona</h1>
+        <div class="welcome-sedona">
+          <a>
+            <img src="img/welcome.svg" alt="welcome Sedona" width="456" height="350">
+          </a>
+        </div>
+      </section>
       <section class="reasons">
-        <p>Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p><span>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</span></p>
+        <p class="big">Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="small">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <section class="reason-one">
         <div class="one">
@@ -65,7 +73,7 @@
       <section class="reason-two">
         <div class="photo">
           <a href="#">
-            <img src="/img/reason-one-photo.jpg" alt="Мост дьявола" width="800" height="256">
+            <img src="/img/reason-two-photo.jpg" alt="Мост дьявола" width="800" height="256">
           </a>
         </div>
         <div class="two">
@@ -93,34 +101,32 @@
       </section>
       <section class="interest">
         <p><span>Заинтересовались?</span></p>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
+        <p class="date">Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
       </section>
       <section class="search">
         <h2 class="visually-hidden">Поиск</h2>
+        <a class="search-hotel" href="#">Поиск гостиницы в Седоне</a>
         <!--Начало form-->
         <form action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
-            <legend>Поиск гостиницы в Седоне</legend>
-              <div class="date-arrival">
-                <label for="date-arrival">Дата заезда:</label>
-                <input type="text" id="date-arrival" name="date-arrival" placeholder="24 апреля 2017" required>
-              </div>
-              <div class="date-departure">
-                <label for="date-departure">Дата выезда:</label>
-                <input type="text" id="date-departure" name="date-departure" placeholder="4 июля 2017" required>
-              </div>
-              <div class="adult-number">
-                <label for="adult-number">Взрослые:</label>
-                <input type="text" id="adult-number" name="adult-number" value="2" required>
-              </div>
-              <div class="children-number">
-                <label for="children-number">Дети:</label>
-                <input type="text" id="children-number" name="children-number" value="0" required>
-              </div>
-              <div class="button">
-                <button type="submit">Найти</button>
-              </div>
-          </fieldset>
+          <div class="calendar">
+            <p class="date-arrival">
+              <label for="date-arrival">Дата заезда:</label>
+              <input type="text" id="date-arrival" name="date-arrival" value="24 апреля 2017" required>
+            </p>
+          </div>
+          <p class="date-departure">
+            <label for="date-departure">Дата выезда:</label>
+            <input type="text" id="date-departure" name="date-departure" value="4 июля 2017" required>
+          </p>
+          <p class="adult-number">
+            <label for="adult-number">Взрослые:</label>
+            <input type="text" id="adult-number" name="adult-number" value="2" required>
+          </p>
+          <p class="children-number">
+            <label for="children-number">Дети:</label>
+            <input type="text" id="children-number" name="children-number" value="0" required>
+          </p>
+          <button class="button" type="submit">Найти</button>
         </form>
         <!--Конец form-->
       </section>
