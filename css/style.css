@@ -14,30 +14,30 @@
     --button-hover: #669EC0;
     --button-activate: #5496BD;
 }
-/*
+
 @font-face {
     font-family: "ptsans";
-    src: url("/fonts/ptsans.woff2") format("woff2"),
-         url("/fonts/ptsans.woff") format("woff1");
+    src: url("../fonts/ptsans.woff2") format("woff2"),
+         url("../fonts/ptsans.woff") format("woff1");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "ptsansbold";
-    src: url("/fonts/ptsansbold.woff2") format("woff2"),
-         url("/fonts/ptsansbold.woff") format("woff1");
+    font-family: "ptsans";
+    src: url("../fonts/ptsansbold.woff2") format("woff2"),
+         url("../fonts/ptsansbold.woff") format("woff1");
     font-weight: bold;
     font-style: normal;
 }
-*/
+
 /* Global */
 
 body {
     min-width: 1280px; 
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -85,7 +85,7 @@ img {
 
 /* Welcome sedona*/
 .background {
-    background-image: url(/img/background-photo.png);
+    background-image: url(../img/background-photo.png);
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -188,28 +188,29 @@ color: var(--basic-white);
     font-weight: 700;
 }
 
-.search-hotel {
+.search-hotel p {
+    font: inherit;
+    display: block;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-    color: var(--basic-white);
+    color: var(--basic-black);
     background-color: var(--form-hotel);
     text-align: center;
 }
 
-.search-hotel:hover,
-.search-hotel:focus {
+.search-hotel p:hover,
+.search-hotel p:focus  {
   background-color: var(--hover-hotel);
 }
 
-
-.search-hotel:active {
+.search-hotel p:active {
     background-color: var(--active-hotel);
     opacity: .3;
 }
 
 /* Form */
-.search input {
+.search .element-date {
     font: inherit;
     background-color: transparent;
     border: 0px;
@@ -217,18 +218,143 @@ color: var(--basic-white);
     text-transform: uppercase;
   }
 
-.search input:hover {
+  .search .element-number {
+    font: inherit;
+    background-color: transparent;
+    border: 0px;
+    background-color: var(--color-rating);
+    text-transform: uppercase;
+  }  
+
+.search .element-date:hover {
     background-color: var(--hover-date);
 }
 
-.search input:focus {
+.search .element-date:focus,
+.search .element-date:active {
     background-color: var(--basic-white);
     border: 2px solid var(--focus-border);
 }
 
-.calendar::after {
-    background-color: "../img/calendar-arrival.png";
+.date-arrival::after {
+    content: '';
+    background-image: url(../img/calendar-peace.svg);
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 23px;
+    left: 839px;
+    top: 2231px;
 }
+
+.date-arrival:hover::after {
+    background-image: url(../img/calendar-hover.svg);
+}
+
+.date-arrival:active::after {
+    background-image: url(../img/calendar-active.svg);
+}
+
+.date-departure::after {
+    content: '';
+    background-image: url(../img/calendar-peace.svg);
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 23px;
+    left: 839px;
+    top: 2298px;
+}
+
+.date-departure:hover::after {
+    background-image: url(../img/calendar-hover.svg);
+}
+
+.date-departure:active::after {
+    background-image: url(../img/calendar-active.svg);
+}
+
+.adult-number input,
+.children-number input {
+    text-align: center;
+}
+
+.adult-number::before {
+    content: '';
+    background-image: url(../img/minus-peace.svg);
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    left: 536px;
+    top: 2377px;
+}
+
+.adult-number:hover::before {
+    background-image: url(../img/minus-hover.svg);
+}
+
+.adult-number:active::before {
+    background-image: url(../img/minus-active.svg);
+}
+
+.children-number::before {
+    content: '';
+    background-image: url(../img/minus-peace.svg);
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 3px;
+    left: 769px;
+    top: 2377px;
+}
+
+.children-number:hover::before {
+    background-image: url(../img/minus-hover.svg);
+}
+
+.children-number:active::before {
+    background-image: url(../img/minus-active.svg);
+}
+
+.adult-number::after {
+    content: '';
+    background-image: url(../img/plus-peace.svg);
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 612px;
+    top: 2373px;
+}
+
+.adult-number:hover::after {
+    background-image: url(../img/plus-hover.svg);
+}
+
+.adult-number:active::after {
+    background-image: url(../img/plus-active.svg);
+}
+
+.children-number::after {
+    content: '';
+    background-image: url(../img/plus-peace.svg);
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 845px;
+    top: 2373px;
+}
+
+.children-number:hover::after {
+    background-image: url(../img/plus-hover.svg);
+}
+
+.children-number:active::after {
+    background-image: url(../img/plus-active.svg);
+}
+
 
 /* Button */
 .button {
@@ -244,12 +370,12 @@ color: var(--basic-white);
     border: none;
 }
 
-button:hover,
-button:focus {
+.button:hover,
+.button:focus {
     background-color: var(--button-hover);
 }
 
-button:active {
+.button:active {
     background-color: var(--button-activate);
     opacity: .3;
     border: none;
@@ -270,8 +396,92 @@ button:active {
     color: var(--basic-black);
 }
 
+.social .twitter {
+    background-image: url(../img/twitter-peace.svg);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 48px;
+    left: 43.67%;
+    right: 52.5%;
+    top: 30%;
+    bottom: 30%;
+}
+
+.social .twitter:hover {
+    background-image: url(../img/twitter-hover.svg);
+}
+
+.social .twitter:active {
+    background-image: url(../img/twitter-active.svg);
+}
+
+.social .facebook {
+    background-image: url(../img/facebook-peace.svg);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 48px;
+    left: 48%;
+    right: 48.17%;
+    top: 30%;
+    bottom: 30%;
+}
+
+.social .facebook:hover {
+    background-image: url(../img/facebook-hover.svg);
+}
+
+.social .facebook:active {
+    background-image: url(../img/facebook-active.svg);
+}
+
+.social .youtube {
+    background-image: url(../img/youtube-peace.svg);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 48px;
+    left: 52.33%;
+    right: 43.83%;
+    top: 30%;
+    bottom: 30%;
+}
+
+.social .youtube:hover {
+    background-image: url(../img/youtube-hover.svg);
+}
+
+.social .youtube:active {
+    background-image: url(../img/youtube-active.svg);
+}
+
 .assist {
     line-height: 26px;
+}
+
+.assist .logotype {
+    background-image: url(../img/logo-htmlacademy-peace.svg);
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+    width: 113.98px;
+    height: 39.78px;
+    left: 82%;
+    right: 8.42%;
+    top: 31.67%;
+    bottom: 34.17%;
+}
+
+.assist .logotype:hover {
+    background-image: url(../img/logo-htmlacademy-hover.svg);
+}
+
+.assist .logotype:active {
+    background-image: url(../img/logo-htmlacademy-active.svg);
 }
 
 
