@@ -13,12 +13,14 @@
     --hover-date: #EBEBEB;
     --button-hover: #669EC0;
     --button-activate: #5496BD;
+    --button-opacity: rgba(255, 255, 255, 0.3);
+    --logohtml-active:#BDBBBC;
 }
 
 @font-face {
     font-family: "ptsans";
     src: url("../fonts/ptsans.woff2") format("woff2"),
-         url("../fonts/ptsans.woff") format("woff1");
+         url("../fonts/ptsans.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -26,7 +28,7 @@
 @font-face {
     font-family: "ptsans";
     src: url("../fonts/ptsansbold.woff2") format("woff2"),
-         url("../fonts/ptsansbold.woff") format("woff1");
+         url("../fonts/ptsansbold.woff") format("woff");
     font-weight: bold;
     font-style: normal;
 }
@@ -37,10 +39,11 @@ body {
     min-width: 1280px; 
     margin: 0;
     padding: 0;
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "ptsans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    font-weight: 400;
     color: var(--basic-black);
     text-transform: uppercase;
     background-color: var(--basic-white);
@@ -70,35 +73,163 @@ img {
     list-style: none;
 }
 
-.list-current a:not([href]) {
-    background-color: var(--basic-white);
-}
-
 .list a {
     color: var(--basic-black);
 }
 
-.list a:hover,
-.list a:focus {
+.hotel-item a {
     color: var(--form-hotel);
 }
 
+.inform-item a:hover {
+    color: var(--basic-blue);
+}
+
+.inform-item a:active {
+    opacity: .3;
+}
+
+
 /* Welcome sedona*/
 .background {
-    background-image: url(../img/background-photo.png);
+    display: block;
     background-position: top center;
     background-repeat: no-repeat;
+}
+
+.background-inner {
+    background-image: url(../img/background-photo.png);
+    width: 1200px;
+    height: 509px; /*Спецом увеличил, что бы белый шрифт видно было*/
 }
 
 .welcome-sedona {
     text-align: center;
 }
 
-/* Reasons */
-.reasons .big {
+/* Search-catalog */
+.search-catalog {
+    background-image: url(../img/background-hotel.png);
+    width: 1200px;
+    height: 500px;
+    color: var(--basic-white);
+    background-repeat: repeat-y;
+}
+
+.catalog-form {
+    display: block;
+    border: none;
+}
+
+
+.catalog-form legend,
+.catalog-tittle {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--basic-white);
+}
+
+.left-check {
+    background-position: center;
+    position: relative;
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.right-check {
+    position: relative;
+    display: block;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.left-check:hover,
+.right-check:hover {
+    background-image: url(../img/filter-button-hover.svg);
+    background-position: center;
+    position: absolute;
+    width: 23px;
+    height: 24px;
+}
+
+.show {
+    font: inherit;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    color: var(--basic-white);
+}
+
+.show:hover {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+}
+
+.catalog-search .search-tittle {
+    font-weight: 700;
     font-size: 21px;
     line-height: 26px;
+}
+
+.catalog-search p,
+.catalog-search a {
+    font: inherit;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.catalog-search .price {
+    color: var(--basic-blue);
+}
+
+.catalog-search .type,
+.catalog-search .rating {
+    opacity: .3;
+    color: var(--basic-black);
+    border-bottom: 1px dashed var(--basic-blue);
+}
+
+.catalog-search .rating:hover {
+    color: var(--basic-blue);
+}
+
+.catalog-search .rating:active {
+    color: var(--basic-black);
+    border: none;
+    opacity: 1;
+}
+
+.arrows {
+    position: relative;
+    display: block;
+    width: 11px;
+    height: 10px;
+    margin-bottom: 10px;
+    color: var(--basic-white);
+    border: none;
+    outline: none;
+}
+
+.arrows:hover path {
+    fill: var(--basic-black);
+}
+
+.arrows:active path {
+    fill: var(--basic-blue);
+    border: none;
+}
+
+
+/* Reasons */
+.reasons .big {
     font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
     text-align: center;
 }
 
@@ -206,8 +337,10 @@ color: var(--basic-white);
 
 .search-hotel p:active {
     background-color: var(--active-hotel);
-    opacity: .3;
+    opacity: var(--button-opacity);
 }
+
+/*
 
 /* Form */
 .search .element-date {
@@ -236,125 +369,31 @@ color: var(--basic-white);
     border: 2px solid var(--focus-border);
 }
 
-.date-arrival::after {
-    content: '';
-    background-image: url(../img/calendar-peace.svg);
-    display: block;
-    position: absolute;
-    width: 21px;
-    height: 23px;
-    left: 839px;
-    top: 2231px;
+.calendar,
+.minus,
+.plus {
+    color: var(--basic-white);
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
-.date-arrival:hover::after {
-    background-image: url(../img/calendar-hover.svg);
+.calendar:hover path,
+.minus:hover rect,
+.plus:hover path {
+    fill: var(--basic-black);
 }
 
-.date-arrival:active::after {
-    background-image: url(../img/calendar-active.svg);
-}
-
-.date-departure::after {
-    content: '';
-    background-image: url(../img/calendar-peace.svg);
-    display: block;
-    position: absolute;
-    width: 21px;
-    height: 23px;
-    left: 839px;
-    top: 2298px;
-}
-
-.date-departure:hover::after {
-    background-image: url(../img/calendar-hover.svg);
-}
-
-.date-departure:active::after {
-    background-image: url(../img/calendar-active.svg);
+.calendar:active path,
+.minus:active rect,
+.plus:active path  {
+    fill: var(--basic-blue);
 }
 
 .adult-number input,
 .children-number input {
     text-align: center;
 }
-
-.adult-number::before {
-    content: '';
-    background-image: url(../img/minus-peace.svg);
-    display: block;
-    position: absolute;
-    width: 12px;
-    height: 3px;
-    left: 536px;
-    top: 2377px;
-}
-
-.adult-number:hover::before {
-    background-image: url(../img/minus-hover.svg);
-}
-
-.adult-number:active::before {
-    background-image: url(../img/minus-active.svg);
-}
-
-.children-number::before {
-    content: '';
-    background-image: url(../img/minus-peace.svg);
-    display: block;
-    position: absolute;
-    width: 12px;
-    height: 3px;
-    left: 769px;
-    top: 2377px;
-}
-
-.children-number:hover::before {
-    background-image: url(../img/minus-hover.svg);
-}
-
-.children-number:active::before {
-    background-image: url(../img/minus-active.svg);
-}
-
-.adult-number::after {
-    content: '';
-    background-image: url(../img/plus-peace.svg);
-    display: block;
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    left: 612px;
-    top: 2373px;
-}
-
-.adult-number:hover::after {
-    background-image: url(../img/plus-hover.svg);
-}
-
-.adult-number:active::after {
-    background-image: url(../img/plus-active.svg);
-}
-
-.children-number::after {
-    content: '';
-    background-image: url(../img/plus-peace.svg);
-    display: block;
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    left: 845px;
-    top: 2373px;
-}
-
-.children-number:hover::after {
-    background-image: url(../img/plus-hover.svg);
-}
-
-.children-number:active::after {
-    background-image: url(../img/plus-active.svg);
-}
-
 
 /* Button */
 .button {
@@ -368,6 +407,7 @@ color: var(--basic-white);
     color: var(--basic-white);
     background-color: var(--basic-blue);
     border: none;
+    outline: none;
 }
 
 .button:hover,
@@ -377,10 +417,71 @@ color: var(--basic-white);
 
 .button:active {
     background-color: var(--button-activate);
-    opacity: .3;
+    color: var(--button-opacity);
     border: none;
 }
- 
+
+/*HOTELS*/
+
+.detail h2 {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.detail h2:hover {
+    color: var(--basic-blue);
+} 
+
+.detail h2:active {
+    opacity: .3;
+}
+
+.detail p {
+    color: var(--light-font);
+}
+
+.detail .button {
+    font: inherit;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+    border: none;
+    outline: none;
+}
+
+.detail .button-book {
+    background-color: var(--form-hotel);
+}
+
+.detail .button-detail:hover {
+    background-color: var(--button-hover);
+}
+
+.detail .button-detail:active {
+    background-color: var(--button-activate);
+    color: var(--button-opacity);
+}
+
+.detail .button-book:hover {
+    background-color: var(--hover-hotel);
+}
+
+.detail .button-book:active {
+    background-color: var(--active-hotel);
+    color: var(--button-opacity);
+}
+
+.rating p {
+    color: var(--font-rating);
+    background-color: var(--color-rating);
+}
+
 /* Footer-inner*/
 .footer-inner {
     background-color: var(--color-rating);
@@ -396,67 +497,31 @@ color: var(--basic-white);
     color: var(--basic-black);
 }
 
-.social .twitter {
-    background-image: url(../img/twitter-peace.svg);
-    position: absolute;
-    display: block;
-    background-repeat: no-repeat;
+.social .social-item {
+    color: var(--basic-white);
+    background-color: transparent;
+    border: none;
+    outline: none;
     width: 46px;
     height: 48px;
-    left: 43.67%;
-    right: 52.5%;
-    top: 30%;
-    bottom: 30%;
 }
 
-.social .twitter:hover {
-    background-image: url(../img/twitter-hover.svg);
+.twitter:hover rect,
+.facebook:hover rect,
+.youtube:hover rect {
+    fill: var(--button-hover);
 }
 
-.social .twitter:active {
-    background-image: url(../img/twitter-active.svg);
+.twitter:active rect,
+.facebook:active rect,
+.youtube:active rect {
+    fill: var(--button-activate);
 }
 
-.social .facebook {
-    background-image: url(../img/facebook-peace.svg);
-    position: absolute;
-    display: block;
-    background-repeat: no-repeat;
-    width: 46px;
-    height: 48px;
-    left: 48%;
-    right: 48.17%;
-    top: 30%;
-    bottom: 30%;
-}
-
-.social .facebook:hover {
-    background-image: url(../img/facebook-hover.svg);
-}
-
-.social .facebook:active {
-    background-image: url(../img/facebook-active.svg);
-}
-
-.social .youtube {
-    background-image: url(../img/youtube-peace.svg);
-    position: absolute;
-    display: block;
-    background-repeat: no-repeat;
-    width: 46px;
-    height: 48px;
-    left: 52.33%;
-    right: 43.83%;
-    top: 30%;
-    bottom: 30%;
-}
-
-.social .youtube:hover {
-    background-image: url(../img/youtube-hover.svg);
-}
-
-.social .youtube:active {
-    background-image: url(../img/youtube-active.svg);
+.twitter:active path,
+.facebook:active path,
+.youtube:active path {
+    fill: var(--button-opacity);
 }
 
 .assist {
@@ -464,39 +529,21 @@ color: var(--basic-white);
 }
 
 .assist .logotype {
-    background-image: url(../img/logo-htmlacademy-peace.svg);
-    position: absolute;
-    display: block;
-    background-repeat: no-repeat;
+    color: var(--basic-white);
+    background-color: transparent;
+    border: none;
+    outline: none;
     width: 113.98px;
     height: 39.78px;
-    left: 82%;
-    right: 8.42%;
-    top: 31.67%;
-    bottom: 34.17%;
 }
 
-.assist .logotype:hover {
-    background-image: url(../img/logo-htmlacademy-hover.svg);
+.logotype:hover path {
+    fill: var(--basic-blue);
 }
 
-.assist .logotype:active {
-    background-image: url(../img/logo-htmlacademy-active.svg);
+.logotype:active path {
+    fill: var(--logohtml-active);
 }
-
-
-/*
-font-size: 14px;
-line-height: 21px;
-font-weight: 400;
-color: var(--basic-black);
-background-color: var(--basic-white);
-*/
-
-
-
-
-
 
 .visually-hidden {
     position: absolute;
