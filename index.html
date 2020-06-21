@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normolize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <!--Начало header-->
     <header class="header-inner">
       <!--Начало nav-->
       <nav class="nav-inner">
-        <a class="logo-inner" href="index.html">
-          <img src="img/logo.svg" alt="logotype Sedona" width="138" height="70">
-        </a>
         <div class="main-nav">
-          <ul class="list">
-            <li class="item"><a href="#">Информация</a></li>
-            <li class="item"><a href="#">Фото и видео</a></li>
-            <li class="item"><a href="#">Карта штата</a></li>
-            <li class="item"><a href="catalog.html">Гостиницы</a></li>
-          </ul>
+          <div class="container">
+            <ul class="list">
+              <li class="item"><a href="#">Информация</a></li>
+              <li class="item"><a href="#">Фото и видео</a></li>
+              <li class="item">
+                <a class="logo-inner" href="index.html">
+                  <img src="img/logo.svg" alt="logotype Sedona" width="138" height="70">
+                </a>
+              </li>
+              <li class="item"><a href="#">Карта штата</a></li>
+              <li class="item"><a href="catalog.html">Гостиницы</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <!--Конец nav-->
@@ -28,6 +32,7 @@
     <!--Закончен header-->
     <!--Начало main-->
     <main class="main-inner">
+      <div class="container">
       <section class="background background-inner"> 
         <h1 class="visually-hidden">город Sedona</h1>
         <div class="welcome-sedona">
@@ -40,8 +45,8 @@
         <p class="big">Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="small">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
-      <section class="reason-one">
-        <div class="one">
+      <section class="reason">
+        <div class="words">
           <h2>Настоящий городок</h2>
           <p>— №1 —</p>
           <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
@@ -69,13 +74,13 @@
           <p>Не только китайского, но и местного производства!</p>
         </div>
       </section>
-      <section class="reason-two">
+      <section class="reason">
         <div class="photo">
           <a href="#">
             <img src="/img/reason-two-photo.jpg" alt="Мост дьявола" width="800" height="256">
           </a>
         </div>
-        <div class="two">
+        <div class="words">
           <h2>Там есть мост дьявола</h2>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -99,7 +104,7 @@
         </div>
       </section>
       <section class="interest">
-        <p><span>Заинтересовались?</span></p>
+        <p class="question"><span>Заинтересовались?</span></p>
         <p class="date">Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
       </section>
       <section class="search">
@@ -162,11 +167,13 @@
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <img src="/img/map.png" alt="карта штата" width="1199" height="594">
-      </section>   
+      </section>
+    </div>
     </main>
     <!--Кoнец main-->
     <!--Начало footer-->
     <footer class="footer-inner">
+      <div class="container">
       <div class="telephone-number">
         <p>#VisitSedona</p>
         <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
@@ -199,6 +206,7 @@
             </svg>
         </a>
       </div>
+    </div>
     </footer>
     <!--Конец footer-->
     <p class="visually-hidden">Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
