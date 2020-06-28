@@ -15,6 +15,7 @@
     --button-activate: #5496BD;
     --button-opacity: rgba(255, 255, 255, 0.3);
     --logohtml-active:#BDBBBC;
+    --oval: #ABABAB;
 }
 
 @font-face {
@@ -115,8 +116,8 @@ img {
 .inform-item a:active {
     opacity: .3;
 }
-/*Container*/
-.container {
+/*Wrapper*/
+.wrapper {
     width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
@@ -163,38 +164,81 @@ img {
     list-style: none;
 }
 
-.catalog-form legend,
-.catalog-tittle {
-    font-weight: 700;
-    font-size: 16px;
+.filter-item {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid var(--basic-white);
+}
+
+.price-controls input {
+    width: 60px;
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
     color: var(--basic-white);
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-.left-check {
-    background-position: center;
+.range-filter {
+    width: 316px;
+    margin-top: 10px;
+}
+
+.range-controls {
     position: relative;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 36px;
 }
 
-.right-check {
-    position: relative;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 10px;
+.range-controls .scale {
+    height: 2px;
+    background: var(--button-opacity);
+}
+  
+.range-controls .bar {
+    width: 248px;
+    height: 2px;
+    background: var(--basic-white);
 }
 
-.left-check:hover,
-.right-check:hover {
-    background-image: url(../img/filter-button-hover.svg);
-    background-position: center;
+.range-controls .toggle {
     position: absolute;
-    width: 23px;
-    height: 24px;
+    margin-top: -11px;
+    width: 4px;
+    height: 4px;
+    padding: 0;
+    border: 9px solid var(--basic-white);
+    background-color: var(--oval);
+    border-radius: 50%;
+    box-shadow: 0 2px 0px 0 var(--oval);
+    cursor: pointer;
 }
+
+.range-controls .toggle-min {
+    left: 0px;
+}
+  
+.range-controls .toggle-max {
+    left: 248px;
+}
+
+.range-controls .toggle-min:hover,
+.range-controls .toggle-max:hover {
+    border: 11px solid var(--basic-white);
+    margin-top: -13px;
+}
+
 
 .show {
     font: inherit;
