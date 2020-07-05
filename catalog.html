@@ -8,6 +8,7 @@
   </head>
   <body class="page-body">
     <div class="wrapper">
+      <div class="background-shadow">
     <!--Начало header-->
       <header class="header-inner">
       <!--Начало nav-->
@@ -31,20 +32,20 @@
       <main>
         <section class="background search-catalog">
           <h2 class="visually-hidden">Поиск жилья</h2>
-          <form class="catalog-form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="catalog-formes" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="catalog-form">
               <legend>Инфраструктура:</legend>
                 <ul class="list-catalog">
                   <li class="item">
-                    <input class="filter-input" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+                    <input class="visually-hidden filter-input" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
                     <label for="swimming-pool">Бассейн</label>
                   </li>
                   <li class="item">
-                    <input class="filter-input" type="checkbox" id="parking" name="parking">
+                    <input class="visually-hidden filter-input-off" type="checkbox" id="parking" name="parking">
                     <label for="parking">Парковка</label>
                   </li>
                   <li class="item">
-                    <input class="filter-input" type="checkbox" id="Wi-fi" name="Wi-fi">
+                    <input class="visually-hidden filter-input-off" type="checkbox" id="Wi-fi" name="Wi-fi">
                     <label for="Wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -53,20 +54,20 @@
             <legend>Тип жилья:</legend>
               <ul class="list-catalog">
                 <li class="item">
-                  <input class="filter-input" type="checkbox" id="hotel" name="hotel" checked>
+                  <input class="visually-hidden filter-input" type="checkbox" id="hotel" name="hotel" checked>
                   <label for="hotel">Гостиница</label>
                 </li>
                 <li class="item">
-                  <input class="filter-input" type="checkbox" id="motel" name="motel" checked>
+                  <input class="visually-hidden filter-input" type="checkbox" id="motel" name="motel" checked>
                   <label for="motel">Мотель</label>
                 </li>
                 <li class="item">
-                  <input class="filter-input" type="checkbox" id="apartments" name="apartments" checked>
+                  <input class="visually-hidden filter-input" type="checkbox" id="apartments" name="apartments" checked>
                   <label for="apartments">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter-item">
+            <fieldset class="filter-item catalog-form">
             <legend>Стоимость в сутки (р):</legend>
             <div class="range-filter">
               <div class="price-controls">
@@ -98,12 +99,12 @@
             <a class="rating" href="#">По рейтингу</a>
           </div>
           <div class="arrows">
-            <a class="arrow" href="#">
+            <a class="arrow arrow-one" href="#">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
               </svg>
             </a>
-            <a class="arrow" href="#">
+            <a class="arrow arrow-two" href="#">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
               </svg>
@@ -111,16 +112,19 @@
           </div>
         </div>
         <section class="amara-resort catalog-hotel">
+          <div class="catalog-hotel-left">
           <div class="catalog-photo">
             <img src="img/amara-serort.jpg" alt="Amara resort" width="135" height="90">
           </div>
           <div class="detail">
             <a href="#"><h2>Amara Resort & Spa</h2></a>
-            <p>Гостиница</p>
-            <p>от 4000 р.</p>
+            <p class="p-hotel">Гостиница</p>
+            <p class="p-price">от 4000 р.</p>
             <a class="button button-detail" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
+        </div>
+        <div class="catalog-hotel-right">
           <div class="rating">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
@@ -131,23 +135,27 @@
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
             <p>Рейтинг: 8,5</p>
           </div>
+        </div>
         </section>
         <section class="desert-quail catalog-hotel">
+          <div class="catalog-hotel-left">
           <div class="catalog-photo">
             <img src="img/desert-quail.jpg" alt="Desert quail" width="135" height="90">
           </div>
           <div class="detail">
             <a href="#"><h2>Desert Quail Inn</h2></a>
-            <p>Мотель</p>
-            <p>от 3000 р.</p>
+            <p class="p-hotel">Мотель</p>
+            <p class="p-price">от 3000 р.</p>
             <a class="button button-detail" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
+        </div>
+        <div class="catalog-hotel-right">
           <div class="rating">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
@@ -155,32 +163,37 @@
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
             <p>Рейтинг: 8,9</p>
           </div>
+        </div>
         </section>
         <section class="villas-diablo catalog-hotel">
+          <div class="catalog-hotel-left">
           <div class="catalog-photo">
             <img src="img/villas-diablo.jpg" alt="Villas at poco diablo" width="135" height="90">
           </div>
           <div class="detail">
             <a href="#"><h2>Villas at Poco Diablo</h2></a>
-            <p>Апартаменты</p>
-            <p>от 2000 р.</p>
+            <p class="p-hotel">Апартаменты</p>
+            <p class="p-price">от 2000 р.</p>
             <a class="button button-detail" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
+          </div>
+          <div class="catalog-hotel-right">
           <div class="rating">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
             <p>Рейтинг: 9,2</p>
           </div>
+        </div>
         </section>
       </main>
     <!-- Конец main-->
@@ -221,5 +234,6 @@
       </footer>
     <!--Конец footer-->
     </div>
+  </div>
   </body>
 </html>

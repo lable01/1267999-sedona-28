@@ -16,6 +16,9 @@
     --button-opacity: rgba(255, 255, 255, 0.3);
     --logohtml-active:#BDBBBC;
     --oval: #ABABAB;
+    --box-shadow:  rgba(0, 1, 1, 0.2);
+    --background-other: #EEEEEE;
+    --background-footer: rgba(255, 255, 255, 0.9);
 }
 
 @font-face {
@@ -47,7 +50,7 @@ body {
     line-height: 21px;
     color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--basic-white);
+    background-color: var(--fields-color);
 }
 
 a { 
@@ -57,6 +60,33 @@ a {
 img {
     max-width: 100%;
     height: auto; 
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*Wrapper*/
+.wrapper {
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background-color: var(--basic-white);
+}
+
+.background-shadow {
+    box-shadow: 0px 5px 15px var(--box-shadow);
 }
 
 /*Grid*/
@@ -73,7 +103,10 @@ img {
 
 /*Main-header*/
 .header-inner {
-    margin-bottom: 0px;
+    position: relative;
+    min-height: 70px;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Main navigation */
@@ -81,7 +114,6 @@ img {
     line-height: 26px;
     color: var(--basic-black);
     background-color: transparent;
-
 }
 
 .main-nav {
@@ -90,37 +122,39 @@ img {
 
 .list {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    padding-left: 72px;
+    padding-right: 72px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .logo-inner {
-    width: 138px;
-    height: 70px;
+    position: absolute;
+    left: 531px;
 }
 
 .list a {
     color: var(--basic-black);
+    display: block;
+    padding: 25px 20px;
 }
 
 .hotel-item a {
     color: var(--form-hotel);
 }
 
-.inform-item a:hover {
+.item a:hover {
     color: var(--basic-blue);
 }
 
-.inform-item a:active {
+.item a:active {
     opacity: .3;
-}
-/*Wrapper*/
-.wrapper {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
 }
 
 /* Welcome sedona*/
@@ -137,7 +171,392 @@ img {
 
 .welcome-sedona {
     text-align: center;
+    position: relative;
 }
+
+.welcome-sedona a {
+    position: absolute;
+    left: 371px;
+    top: 77px;
+}
+
+
+
+/* Reasons */
+.reasons {
+    min-height: 216px;
+    position: relative;
+}
+
+.reasons .big {
+    width: 470px;
+    position: absolute;
+    top: 42px;
+    left: 365px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.reasons .small {
+    min-width: 519px;
+    position: absolute;
+    top: 139px;
+    left: 340px;
+    line-height: 26px;
+    text-align: center;
+}
+
+/* Reason one */
+.reason {
+    display: flex;
+    justify-content: space-between;
+}
+
+.words {
+    width: 400px;
+    background-color: var(--basic-blue);
+    text-align: center;
+}
+.words h2 {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--basic-white);
+    width: 150px;
+    margin-left: 125px;
+    margin-top: 47px;
+}
+
+.words p {
+    color: var(--basic-white);
+    padding: 0px;
+    margin: 0px;
+}
+
+.words .p-one {
+    width: 59px;
+    margin-left: 175px;
+    margin-top: 25px;
+}
+
+.words .p-two {
+    width: 302px;
+    margin-left: 49px;
+    margin-top: 23px;
+}
+
+.reason .photo {
+    background-color: var(--basic-white);
+    height: 256px;
+}
+
+.photo img {
+    width: 800px;
+    height: 256px;
+}
+
+/* Life */
+.life {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 330px;
+}
+
+.life img {
+    margin: 0 auto;
+    margin-top: 60px;
+}
+ 
+.life .img-right {
+    margin-top: 55px;
+}
+
+.life h2 {
+    margin: 0 auto;
+    margin-top: 28px;
+    max-width: 254px;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.life p {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 297px;
+    left: 73px;
+    top: 206px;
+}
+
+/* Other-quistions */
+.other-quistions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 256px;
+    text-align: center;
+    background-color: var(--background-other);
+}
+
+.other-quistions h2 {
+    width: 119px;
+    margin: 0 auto;
+    margin-top: 47px;
+    padding: 0px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.other .p-one {
+    min-width: 59px;
+    max-width: 207px;
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 0px;
+}
+
+.other .p-two {
+    width: 258px;
+    margin: 0 auto;
+    margin-top: 23px;
+    padding: 0px;
+}
+
+/* Interest*/
+.layer {
+    position: relative;
+
+}
+
+.interest {
+    min-height: 291px;
+    text-align: center;
+    z-index: 1;
+    max-width: 435px;
+    margin: 0 auto;
+}
+
+.interest .question {
+    font-size: 30px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 58px;
+
+}
+
+.interest .date,
+.interest b {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--light-font);
+    margin-top: 36px;;
+}
+/* Search */
+.search {
+    position: absolute;
+    width: 568px;
+    line-height: 21px;
+    font-weight: 700;
+    z-index: 3;
+    left: 316px;
+    top: 205px;
+    background-color: var(--basic-white);
+}
+
+.search-hotel p {
+    margin: 0;
+    padding-top: 30px;
+    font: inherit;
+    display: block;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-white);
+    background-color: var(--form-hotel);
+    text-align: center;
+    min-height: 56px;
+}
+
+.search-hotel p:hover,
+.search-hotel p:focus  {
+  background-color: var(--hover-hotel);
+}
+
+.search-hotel p:active {
+    background-color: var(--active-hotel);
+    opacity: var(--button-opacity);
+}
+
+/* Form */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-form .date {
+    display: block;
+    width: 450px;
+    margin: 0px;
+    margin-left: 55px;
+}
+
+.search-form label {
+    display: inline-block;
+    margin-right: 0px;
+    width: 101px;
+}
+
+.search-form .date-arrival {
+    margin-top: 61px;
+}
+
+.search-form .date-departure {
+    margin-top: 29px;
+}
+
+.date .element-date {
+    width: 340px;
+    height: 38px;
+    font: inherit;
+    border: 0px;
+    background-color: var(--color-rating);
+    text-transform: uppercase;
+  }
+
+.search-form .date {
+    position: relative;
+}
+
+.calendar {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+}
+.search-form .number {
+    position: relative;
+    display: block;
+    width: 225px;
+    margin: 0px;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+
+.search-form .children-number {
+    display: block;
+    width: 179px;
+    margin-left: 50px;
+    margin-right: 55px;
+}
+
+.number .label-children {
+    width: 62px;
+}
+
+.search .element-number {
+    width: 113px;
+    height: 38px;
+    padding: 0px;
+    font: inherit;
+    background-color: transparent;
+    border: 0px;
+    background-color: var(--color-rating);
+    text-transform: uppercase;
+}  
+
+.number .minus {
+    position: absolute;
+    top: 7px;
+    right: 86px;
+}
+
+.number .plus {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+}
+
+.search .element-date:hover {
+    background-color: var(--hover-date);
+}
+
+.search .element-date:focus,
+.search .element-date:active {
+    background-color: var(--basic-white);
+    border: 2px solid var(--focus-border);
+}
+
+.calendar,
+.minus,
+.plus {
+    color: var(--basic-white);
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.calendar:hover path,
+.minus:hover rect,
+.plus:hover path {
+    fill: var(--basic-black);
+}
+
+.calendar:active path,
+.minus:active rect,
+.plus:active path  {
+    fill: var(--basic-blue);
+}
+
+.adult-number input,
+.children-number input {
+    text-align: center;
+}
+
+.map {
+    position: relative;
+    z-index: 1;
+}
+/* Button */
+.button {
+    font: inherit;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+    border: none;
+    outline: none;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--button-hover);
+}
+
+.button:active {
+    background-color: var(--button-activate);
+    color: var(--button-opacity);
+    border: none;
+}
+
+.search-button {
+    display: block;
+    width: 458px;
+    height: 58px;
+    margin: 0 auto;
+    margin-top: 54px;
+    margin-bottom: 55px;
+
+}
+
 
 /* Search-catalog */
 .search-catalog {
@@ -147,10 +566,37 @@ img {
     color: var(--basic-white);
 }
 
-.catalog-form {
+.catalog-formes {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
+}
+
+.catalog-formes fieldset {
+    margin-left: 72px;
+    margin-top: 27px;
+    padding: 0;
     border: none;
+} 
+
+.catalog-formes fieldset:last-child {
+    margin: 0 auto;
+    margin-top: 27px;
+}
+
+.catalog-form legend {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.list-catalog .item {
+    margin-top: 24px;
+}
+
+.item label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
 }
 
 .catalog-search {
@@ -164,8 +610,36 @@ img {
     list-style: none;
 }
 
+.filter-input-off + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border: 2px solid var(--basic-white);
+    border-radius: 3px;
+}
+
+.filter-input + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 27px;
+    height: 23px;
+    background-image: url("/img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+
+
+/*Filter item*/
 .filter-item {
+    position: relative;
     margin: 0;
+    margin-left: 100px;
     padding: 0;
     border: none;
 }
@@ -214,7 +688,7 @@ img {
 
 .range-controls .toggle {
     position: absolute;
-    margin-top: -11px;
+    bottom: 24px;
     width: 4px;
     height: 4px;
     padding: 0;
@@ -236,16 +710,20 @@ img {
 .range-controls .toggle-min:hover,
 .range-controls .toggle-max:hover {
     border: 11px solid var(--basic-white);
-    margin-top: -13px;
+    bottom: 22px;
 }
 
 
-.show {
+.filter-item .show {
+    margin-left: 93px;
+    margin-bottom: 32px;
     font: inherit;
     text-transform: uppercase;
     background-color: transparent;
     border: 2px solid var(--basic-white);
     color: var(--basic-white);
+    width: 137px;
+    height: 36px;
 }
 
 .show:hover {
@@ -253,21 +731,41 @@ img {
     color: var(--basic-black);
 }
 
-.catalog-search .search-tittle {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 26px;
+.catalog-search {
+    min-height: 85px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    border-bottom: 1px solid var(--focus-border)
+}
+
+.catalog-search .sort {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .catalog-search p,
 .catalog-search a {
     margin: 0;
+    padding: 0;
     font: inherit;
     font-size: 12px;
     line-height: 18px;
 }
 
+.catalog-search .search-tittle {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    margin-left: 73px;
+    margin-right: 46px;
+}
+
 .catalog-search .price {
+    margin-left: 40px;
     color: var(--basic-blue);
 }
 
@@ -276,6 +774,11 @@ img {
     opacity: .3;
     color: var(--basic-black);
     border-bottom: 1px dashed var(--basic-blue);
+}
+
+.catalog-search .type {
+    margin-left: 32px;
+    margin-right: 32px;
 }
 
 .catalog-search .rating:hover {
@@ -289,13 +792,19 @@ img {
 }
 
 .arrow {
-    position: relative;
     width: 11px;
     height: 10px;
-    margin-bottom: 10px;
     color: var(--basic-white);
     border: none;
     outline: none;
+}
+
+.arrows .arrow-two {
+    margin-right: 73px;
+}
+
+.arrows .arrow-one {
+    margin-right: 12px;
 }
 
 .arrow:hover path {
@@ -307,221 +816,36 @@ img {
     border: none;
 }
 
-
-/* Reasons */
-.reasons .big {
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 26px;
-    text-align: center;
-}
-
-.reasons .small {
-    line-height: 26px;
-    text-align: center;
-}
-
-/* Reason one */
-.reason {
-    display: flex;
-    justify-content: space-between;
-}
-
-.words {
-    background-color: var(--basic-blue);
-    text-align: center;
-}
-.words h2 {
-    margin-top: 47px;
-    width: 400px;
-    font-style: 21px;
-    font-weight: 700;
-    color: var(--basic-white);
-}
-
-.words p {
-    margin: 0;
-    color: var(--basic-white);
-}
-
-.reason .photo {
-    background-color: var(--basic-white);
-    height: 256px;
-}
-
-.photo img {
-    width: 800px;
-    height: 256px;
-}
-
-/* Life */
-.life {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.life h2 {
-    font-size: 21px;
-    font-weight: 700;
-}
-
-/* Other-quistions */
-.other-quistions {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.other-quistions h2 {
-    margin-top: 47px;
-    margin-bottom: 25px;
-    font-size: 21px;
-    font-weight: 700;
-}
-
-/* Interest*/
-.interest {
-    text-align: center;
-}
-
-.interest span {
-    font-size: 30px;
-    line-height: 24px;
-    font-weight: 700;
-}
-
-.interest .question {
-    margin-top: 58px;
-    margin-bottom: 40px;
-}
-
-.interest .date,
-.interest b {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    color: var(--light-font);
-}
-/* Search */
-.search {
-    width: 568px;
-    line-height: 21px;
-    font-weight: 700;
-}
-
-.search-hotel p {
-    margin: 0;
-    font: inherit;
-    display: block;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    color: var(--basic-white);
-    background-color: var(--form-hotel);
-    text-align: center;
-}
-
-.search-hotel p:hover,
-.search-hotel p:focus  {
-  background-color: var(--hover-hotel);
-}
-
-.search-hotel p:active {
-    background-color: var(--active-hotel);
-    opacity: var(--button-opacity);
-}
-
-/* Form */
-.search .element-date {
-    font: inherit;
-    background-color: transparent;
-    border: 0px;
-    background-color: var(--color-rating);
-    text-transform: uppercase;
-  }
-
-  .search .element-number {
-    font: inherit;
-    background-color: transparent;
-    border: 0px;
-    background-color: var(--color-rating);
-    text-transform: uppercase;
-  }  
-
-.search .element-date:hover {
-    background-color: var(--hover-date);
-}
-
-.search .element-date:focus,
-.search .element-date:active {
-    background-color: var(--basic-white);
-    border: 2px solid var(--focus-border);
-}
-
-.calendar,
-.minus,
-.plus {
-    color: var(--basic-white);
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-
-.calendar:hover path,
-.minus:hover rect,
-.plus:hover path {
-    fill: var(--basic-black);
-}
-
-.calendar:active path,
-.minus:active rect,
-.plus:active path  {
-    fill: var(--basic-blue);
-}
-
-.adult-number input,
-.children-number input {
-    text-align: center;
-}
-
-/* Button */
-.button {
-    font: inherit;
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    vertical-align: middle;
-    color: var(--basic-white);
-    background-color: var(--basic-blue);
-    border: none;
-    outline: none;
-}
-
-.button:hover,
-.button:focus {
-    background-color: var(--button-hover);
-}
-
-.button:active {
-    background-color: var(--button-activate);
-    color: var(--button-opacity);
-    border: none;
-}
-
-/*Hotel grid*/
+/*Hotel*/
 .catalog-hotel {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    min-height: 150px;
+    border-bottom: 1px solid var(--focus-border);
 }
 
+.catalog-hotel .catalog-hotel-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
 
+.catalog-hotel-left .catalog-photo {
+    margin-left: 73px;
+    margin-top: 30px;
+    margin-right: 29px;
+    width: 135px;
+    height: 90px;
+}
 
-/*Hotel*/
+.catalog-hotel-left .detail {
+    width: 262px;
+}
+
 .detail h2 {
     margin: 0;
+    margin-top: 21px;
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
@@ -536,12 +860,22 @@ img {
 }
 
 .detail p {
+    display: inline-block;
+    width: 100px;
     margin: 0;
     color: var(--light-font);
 }
 
+.detail .p-hotel {
+    margin-top: 6px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
 .detail .button {
+    display: inline-block;
     margin: 0;
+    padding-top: 6px;
     font: inherit;
     font-size: 14px;
     line-height: 21px;
@@ -555,8 +889,16 @@ img {
     outline: none;
 }
 
+.detail .button-detail {
+    width: 110px;
+    height: 27px;
+    margin-right: 6px;
+}
+
 .detail .button-book {
     background-color: var(--form-hotel);
+    width: 142px;
+    height: 27px;
 }
 
 .detail .button-detail:hover {
@@ -576,46 +918,78 @@ img {
     background-color: var(--active-hotel);
     color: var(--button-opacity);
 }
+.rating svg {
+    margin-top: 28px;
+    margin-right: 6px;
+}
+
+.rating .last {
+    margin-right: 71px;
+}
 
 .rating p {
+    width: 110px;
+    height: 27px;
+    text-align: center;
+    margin-top: 45px;
+    margin-right: 73px;
+    padding-top: 5px;
     color: var(--font-rating);
     background-color: var(--color-rating);
+
 }
 
-.catalog-photo img {
-    
-    width: 135px;
-    height: 90px;
-}
+
+
 /* Footer-inner*/
 .footer-inner {
-    background-color: var(--color-rating);
-}
-
-.footer-inner .container {
+    min-height: 120px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: var(--background-footer);
+    display: flex;
 }
 
 .telephone-number {
+    margin-top: 25px;
+    margin-left: 111px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
+.telephone-number p {
+    margin: 0px;
+}
 
 .telephone-number a {
+    font: inherit;
     color: var(--basic-black);
+    margin: 0px;
+    margin-top: 9px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social .social-item {
-    margin: 0px;
-    width: 400px;
     color: var(--basic-white);
-    background-color: transparent;
     border: none;
     outline: none;
     width: 46px;
     height: 48px;
+    margin-left: 0px;
+}
+
+.social .facebook {
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .twitter:hover rect,
@@ -637,10 +1011,18 @@ img {
 }
 
 .assist {
+    display: flex;
     line-height: 26px;
+    margin: 0px;
 }
 
+.assist p {
+    margin-top: 49px;
+}
 .assist .logotype {
+    margin-left: 8px;
+    margin-top: 38px;
+    margin-right: 138px;
     color: var(--basic-white);
     background-color: transparent;
     border: none;
@@ -657,13 +1039,3 @@ img {
     fill: var(--logohtml-active);
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}

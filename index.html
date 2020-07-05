@@ -8,6 +8,7 @@
   </head>
   <body class="page-body">
     <div class="wrapper">
+      <div class="background-shadow">
     <!--Начало header-->
       <header class="header-inner">
       <!--Начало nav-->
@@ -44,8 +45,8 @@
         <section class="reason">
           <div class="words">
             <h2>Настоящий городок</h2>
-            <p>— №1 —</p>
-            <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="p-one">— №1 —</p>
+            <p class="p-two">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="photo">
             <a href="#">
@@ -65,7 +66,7 @@
             <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
           </div>
           <div class="souvenirs">
-            <img src="/img/souvenirs.svg" alt="Сувениры" width="64" height="76">
+            <img class="img-right" src="/img/souvenirs.svg" alt="Сувениры" width="64" height="76">
             <h2>Сувениры</h2>
             <p>Не только китайского, но и местного производства!</p>
           </div>
@@ -78,38 +79,39 @@
           </div>
           <div class="words">
             <h2>Там есть мост дьявола</h2>
-            <p>— №2 —</p>
-            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <p class="p-one">— №2 —</p>
+            <p class="p-two">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </section>
         <section class="other-quistions">
-          <div class="territory">
+          <div class="other">
             <h2>Небольшая площадь</h2>
-            <p>— №3 —</p>
-            <p>Все достопримечательности находятся очень близко</p>
+            <p class="p-one">— №3 —</p>
+            <p class="p-two">Все достопримечательности находятся очень близко</p>
           </div>
-          <div class="road">
+          <div class="other">
             <h2>Красивая дорога</h2>
-            <p>— №4 —</p>
-            <p>Ехать в седону из лас-вегаса совсем не скучно!</p>
+            <p class="p-one">— №4 —</p>
+            <p class="p-two">Ехать в седону из лас-вегаса совсем не скучно!</p>
           </div>
-          <div class="tourist">
+          <div class="other">
             <h2>Мало туристов</h2>
-            <p>— №5 —</p>
-            <p>Большинство едет в гранд каньон и толпится там</p>
+            <p class="p-one">— №5 —</p>
+            <p class="p-two">Большинство едет в гранд каньон и толпится там</p>
           </div>
         </section>
+        <div class="layer">
         <section class="interest">
-          <p class="question"><span>Заинтересовались?</span></p>
-          <p class="date">Укажите предполагаемые даты поездки, и мы покажем вам <b>лучшие предложения гостиниц в Седоне</b></p>
+          <p class="question">Заинтересовались?</p>
+          <p class="date">Укажите предполагаемые даты поездки,<br/>и мы покажем вам<b>лучшие предложения гостиниц в Седоне</b></p>
         </section>
         <section class="search">
           <h2 class="visually-hidden">Поиск</h2>
           <a class="search-hotel" href="#"><p>Поиск гостиницы в Седоне</p></a>
         <!--Начало form-->
-          <form action="https://echo.htmlacademy.ru" method="get">
-            <p class="date-arrival">
-              <label for="date-arrival">Дата заезда:</label>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <p class="date date-arrival">
+              <label class="label-arrival" for="date-arrival">Дата заезда:</label>
               <input class="element-date" type="text" id="date-arrival" name="date-arrival" value="24 апреля 2017" required>
               <button class="calendar">
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -118,7 +120,7 @@
                 </svg>              
               </button>
             </p>
-            <p class="date-departure">
+            <p class="date date-departure">
               <label for="date-departure">Дата выезда:</label>
               <input class="element-date" type="text" id="date-departure" name="date-departure" value="4 июля 2017" required>
               <button class="calendar">
@@ -128,8 +130,8 @@
                 </svg>              
               </button>
             </p>
-            <p class="adult-number">
-              <label for="adult-number">Взрослые:</label>
+            <p class="adult-number number">
+              <label class="label-adult" for="adult-number">Взрослые:</label>
               <input class="element-number" type="text" id="adult-number" name="adult-number" value="2" required>
               <button class="minus">
                 <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,8 +144,8 @@
                 </svg>
               </button>
             </p>
-            <p class="children-number">
-              <label for="children-number">Дети:</label>
+            <p class="children-number number">
+              <label class="label-children" for="children-number">Дети:</label>
               <input class="element-number" type="text" id="children-number" name="children-number" value="0" required>
               <button class="minus">
                 <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +158,7 @@
                 </svg>
               </button>
             </p>
-            <button class="button" type="submit">Найти</button>
+            <button class="search-button button" type="submit">Найти</button>
           </form>
         <!--Конец form-->
         </section>
@@ -164,6 +166,7 @@
           <h2 class="visually-hidden">Как до нас добраться</h2>
           <img src="/img/map.png" alt="карта штата" width="1199" height="594">
         </section>
+        </div>
       </main>
     <!--Кoнец main-->
     <!--Начало footer-->
@@ -202,6 +205,7 @@
        </div>
       </footer>
     <!--Конец footer-->
+      </div>
     </div>
   </body>
 </html>
