@@ -590,26 +590,54 @@ input[type="radio"].visually-hidden {
 
 .list-catalog .item {
     margin-top: 24px;
+    padding-left: -5px;
 }
 
-.item label {
+.item .check {
     position: relative;
     display: block;
     cursor: pointer;
     user-select: none;
 }
 
-.catalog-search {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    justify-content: space-between;
-
-}
-
 .list-catalog {
     list-style: none;
 }
 
+/*Checkbox*/
+.check-box {
+    position: absolute;
+    margin-left: -40px;
+    width: 23px;
+    height: 23px;
+    background-image: url(/img/checkbox-off.svg);
+}
+
+.check-input:checked + .check-box {
+    width: 27px;
+    height: 23px;
+    background-image: url(/img/checkbox-on.svg);
+}
+
+.check-box:focus,
+.check-box:hover {
+    background-image: url(/img/checkbox-off-hover.svg);
+}
+
+.check-input:checked:focus + .check-box,
+.check-input:checked:hover + .check-box, {
+    background-image: url(/img/checkbox-on-hover.svg);
+}
+
+.check-input:disabled + .check-box {
+    background-image: url(/img/checkbox-off-disabled.svg);
+}
+
+.check-input:checked:disabled + .check-box {
+    background-image: url(/img/checkbox-on-disabled.svg);
+}
+
+/*
 .filter-input-off + label::before {
     content: "";
     position: absolute;
@@ -632,7 +660,7 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
     background-position: 0 0;
   }
-
+*/
 
 
 /*Filter item*/
@@ -732,6 +760,9 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-search {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
     min-height: 85px;
     display: flex;
     margin: 0;
