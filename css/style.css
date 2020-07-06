@@ -50,7 +50,6 @@ body {
     line-height: 21px;
     color: var(--basic-black);
     text-transform: uppercase;
-    background-color: var(--fields-color);
 }
 
 a { 
