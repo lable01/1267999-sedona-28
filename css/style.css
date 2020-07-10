@@ -94,6 +94,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-body{
+    position: relative;
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
@@ -102,10 +103,10 @@ input[type="radio"].visually-hidden {
 
 /*Main-header*/
 .header-inner {
-    position: relative;
     min-height: 70px;
     margin: 0px;
     padding: 0px;
+    z-index: 1;
 }
 
 /* Main navigation */
@@ -123,26 +124,44 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     list-style: none;
-    padding-left: 72px;
-    padding-right: 72px;
     font-weight: 700;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 .logo-inner {
     position: absolute;
-    left: 531px;
+    left: 603px;
 }
 
-.list a {
+
+.item a {
     color: var(--basic-black);
-    display: block;
-    padding: 25px 20px;
+    display: flex;
+    padding: 14px 20px;
 }
+
+.list .item:nth-child(-n+2) {
+    margin-left: 12px;
+    margin-right: 82px;
+}
+
+.list .item:nth-child(3) {
+    margin-left: auto;
+    margin-right: 107px;
+}
+
+.list .item:nth-child(4) {
+    margin-right: 52px;
+}
+
+/*.item:last-child a {
+    margin-left: 12px;
+    margin-right: 53px;*/
+}
+
 
 .hotel-item a {
     color: var(--form-hotel);
@@ -157,6 +176,12 @@ input[type="radio"].visually-hidden {
 }
 
 /* Welcome sedona*/
+.layer-sedona {
+    position: absolute;
+    z-index: 2;
+    top: 55px;
+}
+
 .background {
     background-position: top center;
     background-repeat: no-repeat;
@@ -165,7 +190,7 @@ input[type="radio"].visually-hidden {
 .background-inner {
     background-image: url(../img/background-photo.png);
     width: 1200px;
-    height: 509px; 
+    height: 509px;
 }
 
 .welcome-sedona {
@@ -175,8 +200,8 @@ input[type="radio"].visually-hidden {
 
 .welcome-sedona a {
     position: absolute;
-    left: 371px;
-    top: 77px;
+    left: 372px;
+    top: 78px;
 }
 
 
@@ -190,7 +215,7 @@ input[type="radio"].visually-hidden {
 .reasons .big {
     width: 470px;
     position: absolute;
-    top: 42px;
+    top: 22px;
     left: 365px;
     font-weight: 700;
     font-size: 21px;
@@ -201,7 +226,7 @@ input[type="radio"].visually-hidden {
 .reasons .small {
     min-width: 519px;
     position: absolute;
-    top: 139px;
+    top: 124px;
     left: 340px;
     line-height: 26px;
     text-align: center;
@@ -224,7 +249,7 @@ input[type="radio"].visually-hidden {
     color: var(--basic-white);
     width: 150px;
     margin-left: 125px;
-    margin-top: 47px;
+    margin-top: 46px;
 }
 
 .words p {
@@ -234,15 +259,37 @@ input[type="radio"].visually-hidden {
 }
 
 .words .p-one {
+    display: flex;
+    align-items: center;
     width: 59px;
-    margin-left: 175px;
-    margin-top: 25px;
+    margin-left: 177px;
+    margin-top: 27px;
+}
+
+.words .p-one:before,
+.words .p-one:after {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 1px;
+    background: var(--basic-white);
+}
+
+.words .p-one:before {
+    margin-left: 0px;
+    margin-right: 4px;
+    margin-top: 3px;
+}
+
+.words .p-one:after {
+    margin-left: 4px;
+    margin-top: 3px;
 }
 
 .words .p-two {
     width: 302px;
     margin-left: 49px;
-    margin-top: 23px;
+    margin-top: 24px;
 }
 
 .reason .photo {
@@ -255,7 +302,11 @@ input[type="radio"].visually-hidden {
     height: 256px;
 }
 
-/* Life */
+.words-devil {
+    margin-top: 3px;
+ }
+
+
 .life {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -277,7 +328,8 @@ input[type="radio"].visually-hidden {
 
 .life h2 {
     margin: 0 auto;
-    margin-top: 28px;
+    margin-top: 23px;
+    margin-left: 72px;
     max-width: 254px;
     font-size: 21px;
     font-weight: 700;
@@ -289,9 +341,12 @@ input[type="radio"].visually-hidden {
     margin-top: 25px;
     width: 297px;
     left: 73px;
-    top: 206px;
+    margin-top: 26px;
 }
 
+.food img {
+    margin-top: 61px;
+}
 /* Other-quistions */
 .other-quistions {
     display: grid;
@@ -311,12 +366,35 @@ input[type="radio"].visually-hidden {
 }
 
 .other .p-one {
+    display: flex;
     min-width: 59px;
     max-width: 207px;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-left: 176px;
+    margin-top: 26px;
     padding: 0px;
+    align-items: center;
 }
+
+.other .p-one:before,
+.other .p-one:after {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 1px;
+    margin-top: 1px;
+    background: var(--basic-black);
+}
+
+.other .p-one:before {
+    margin-left: 0px;
+    margin-right: 4px;
+}
+
+.other .p-one:after {
+    margin-left: 4px;
+}
+
 
 .other .p-two {
     width: 258px;
@@ -353,7 +431,7 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     font-weight: 400;
     color: var(--light-font);
-    margin-top: 36px;;
+    margin-top: 32px;
 }
 /* Search */
 .search {
@@ -635,32 +713,6 @@ input[type="radio"].visually-hidden {
 .check-input:checked:disabled + .check-box {
     background-image: url(/img/checkbox-on-disabled.svg);
 }
-
-/*
-.filter-input-off + label::before {
-    content: "";
-    position: absolute;
-    left: -42px;
-    top: 0;
-    width: 23px;
-    height: 23px;
-    border: 2px solid var(--basic-white);
-    border-radius: 3px;
-}
-
-.filter-input + label::before {
-    content: "";
-    position: absolute;
-    left: -42px;
-    top: 0;
-    width: 27px;
-    height: 23px;
-    background-image: url("/img/checkbox-on.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-  }
-*/
-
 
 /*Filter item*/
 .filter-item {
