@@ -21,7 +21,7 @@
               <li class="item"><a href="#">Информация</a></li>
               <li class="item"><a href="#">Фото и видео</a></li>
               <li class="item"><a href="#">Карта штата</a></li>
-              <li class="hotel-item"><a href="catalog.html">Гостиницы</a></li>
+              <li class="item hotel-item"><a href="catalog.html">Гостиницы</a></li>
             </ul>
           </div>
         </nav>
@@ -29,6 +29,7 @@
       </header>
     <!--Закончен header-->
     <!--Начало main-->
+    <div class="layer-hotels">
       <main>
         <section class="background search-catalog">
           <h2 class="visually-hidden">Поиск жилья</h2>
@@ -90,10 +91,10 @@
             <div class="range-filter">
               <div class="price-controls">
                 <label class="min-price">
-                  от <input type="number" name="min-price" value="0">
+                  от <input class="input-min-price" type="number" name="min-price" value="0">
                 </label>
                 <label class="max-price">
-                  до <input type="number" name="max-price" value="3000">
+                  до <input class="input-max-price" type="number" name="max-price" value="3000">
                 </label>
               </div>              
               <div class="range-controls">
@@ -119,12 +120,13 @@
           <div class="arrows">
             <a class="arrow arrow-one" href="#">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
               </svg>
+              
             </a>
             <a class="arrow arrow-two" href="#">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
               </svg>
             </a>
           </div>
@@ -144,6 +146,7 @@
         </div>
         <div class="catalog-hotel-right">
           <div class="rating">
+            <div class="rating-svg">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
@@ -156,6 +159,7 @@
             <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
+            </div>  
             <p>Рейтинг: 8,5</p>
           </div>
         </div>
@@ -175,6 +179,7 @@
         </div>
         <div class="catalog-hotel-right">
           <div class="rating">
+            <div class="rating-svg">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
@@ -184,6 +189,7 @@
             <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
+            </div>
             <p>Рейтинг: 8,9</p>
           </div>
         </div>
@@ -203,12 +209,14 @@
           </div>
           <div class="catalog-hotel-right">
           <div class="rating">
+            <div class="rating-svg">
             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
             <svg class="last" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
             </svg>
+            </div>
             <p>Рейтинг: 9,2</p>
           </div>
         </div>
@@ -251,6 +259,7 @@
         </div>
       </footer>
     <!--Конец footer-->
+    </div>
     </div>
   </div>
   </body>

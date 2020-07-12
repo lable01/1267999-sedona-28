@@ -133,7 +133,7 @@ input[type="radio"].visually-hidden {
 
 .logo-inner {
     position: absolute;
-    left: 603px;
+    left: 606px;
 }
 
 
@@ -150,21 +150,11 @@ input[type="radio"].visually-hidden {
 
 .list .item:nth-child(3) {
     margin-left: auto;
-    margin-right: 107px;
+    margin-right: 108px;
 }
 
 .list .item:nth-child(4) {
     margin-right: 52px;
-}
-
-/*.item:last-child a {
-    margin-left: 12px;
-    margin-right: 53px;*/
-}
-
-
-.hotel-item a {
-    color: var(--form-hotel);
 }
 
 .item a:hover {
@@ -173,6 +163,10 @@ input[type="radio"].visually-hidden {
 
 .item a:active {
     opacity: .3;
+}
+
+.hotel-item a {
+    color: var(--form-hotel);
 }
 
 /* Welcome sedona*/
@@ -441,7 +435,7 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
     z-index: 3;
     left: 316px;
-    top: 205px;
+    top: 147px;
     background-color: var(--basic-white);
 }
 
@@ -476,6 +470,7 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form .date {
+    position: relative;
     display: block;
     width: 450px;
     margin: 0px;
@@ -484,16 +479,16 @@ input[type="radio"].visually-hidden {
 
 .search-form label {
     display: inline-block;
-    margin-right: 0px;
+    margin-left: 0px;
     width: 101px;
 }
 
 .search-form .date-arrival {
-    margin-top: 61px;
+    margin-top: 53px;
 }
 
 .search-form .date-departure {
-    margin-top: 29px;
+    margin-top: 27px;
 }
 
 .date .element-date {
@@ -505,9 +500,7 @@ input[type="radio"].visually-hidden {
     text-transform: uppercase;
   }
 
-.search-form .date {
-    position: relative;
-}
+
 
 .calendar {
     position: absolute;
@@ -595,8 +588,9 @@ input[type="radio"].visually-hidden {
 }
 
 .map {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: 234px;
+    z-index: 2;
 }
 /* Button */
 .button {
@@ -636,6 +630,13 @@ input[type="radio"].visually-hidden {
 
 
 /* Search-catalog */
+.layer-hotels {
+    position: absolute;
+    z-index: 2;
+    top: 55px;
+}
+
+
 .search-catalog {
     background-image: url(../img/background-hotel.png);
     width: 1200px;
@@ -650,14 +651,18 @@ input[type="radio"].visually-hidden {
 
 .catalog-formes fieldset {
     margin-left: 72px;
-    margin-top: 27px;
+    margin-top: 25px;
     padding: 0;
     border: none;
 } 
 
+.catalog-formes fieldset:nth-child(2) {
+    margin-left: 26px;
+}
+
 .catalog-formes fieldset:last-child {
-    margin: 0 auto;
-    margin-top: 27px;
+    margin-left: 210px;
+    margin-top: 25px;
 }
 
 .catalog-form legend {
@@ -725,14 +730,21 @@ input[type="radio"].visually-hidden {
 
 .price-controls {
     display: flex;
-    justify-content: space-around;
     border: 2px solid var(--basic-white);
+}
+
+.price-controls label {
+    margin-top: -2px;
+    margin-left: 65px;
+}
+
+.price-controls .max-price {
+    margin-left: 74px;
 }
 
 .price-controls input {
     width: 60px;
     padding: 10px;
-    margin-left: 10px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -740,6 +752,14 @@ input[type="radio"].visually-hidden {
     background: transparent;
     font-family: inherit;
     font-size: inherit;
+}
+
+.input-max-price {
+    margin-left: -18px;
+}
+
+.input-min-price {
+    margin-left: -28px;
 }
 
 .range-filter {
@@ -750,8 +770,7 @@ input[type="radio"].visually-hidden {
 .range-controls {
     position: relative;
     margin-top: 20px;
-    margin-bottom: 20px;
-    height: 36px;
+    height: 33px;
 }
 
 .range-controls .scale {
@@ -760,18 +779,18 @@ input[type="radio"].visually-hidden {
 }
   
 .range-controls .bar {
-    width: 248px;
+    width: 252px;
     height: 2px;
     background: var(--basic-white);
 }
 
 .range-controls .toggle {
     position: absolute;
-    bottom: 24px;
+    bottom: 22px;
     width: 4px;
     height: 4px;
     padding: 0;
-    border: 9px solid var(--basic-white);
+    border: 8px solid var(--basic-white);
     background-color: var(--oval);
     border-radius: 50%;
     box-shadow: 0 2px 0px 0 var(--oval);
@@ -783,7 +802,7 @@ input[type="radio"].visually-hidden {
 }
   
 .range-controls .toggle-max {
-    left: 248px;
+    left: 252px;
 }
 
 .range-controls .toggle-min:hover,
@@ -794,8 +813,8 @@ input[type="radio"].visually-hidden {
 
 
 .filter-item .show {
-    margin-left: 93px;
-    margin-bottom: 32px;
+    margin-left: 85px;
+    margin-top: -0px;
     font: inherit;
     text-transform: uppercase;
     background-color: transparent;
@@ -846,6 +865,14 @@ input[type="radio"].visually-hidden {
     margin-right: 46px;
 }
 
+.catalog-search p {
+    margin-top: -6px;
+}
+
+.catalog-search a {
+    margin-top: -6px;
+}
+
 .catalog-search .price {
     margin-left: 40px;
     color: var(--basic-blue);
@@ -853,14 +880,15 @@ input[type="radio"].visually-hidden {
 
 .catalog-search .type,
 .catalog-search .rating {
+    margin-top: -2px;
     opacity: .3;
     color: var(--basic-black);
-    border-bottom: 1px dashed var(--basic-blue);
+    border-bottom: 1px dotted var(--basic-blue);
 }
 
 .catalog-search .type {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 33px;
+    margin-right: 34px;
 }
 
 .catalog-search .rating:hover {
@@ -871,6 +899,10 @@ input[type="radio"].visually-hidden {
     color: var(--basic-black);
     border: none;
     opacity: 1;
+}
+
+.arrows {
+    margin-top: 5px;
 }
 
 .arrow {
@@ -886,7 +918,7 @@ input[type="radio"].visually-hidden {
 }
 
 .arrows .arrow-one {
-    margin-right: 12px;
+    margin-right: 9px;
 }
 
 .arrow:hover path {
@@ -927,7 +959,7 @@ input[type="radio"].visually-hidden {
 
 .detail h2 {
     margin: 0;
-    margin-top: 21px;
+    margin-top: 23px;
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
@@ -949,22 +981,26 @@ input[type="radio"].visually-hidden {
 }
 
 .detail .p-hotel {
-    margin-top: 6px;
-    margin-right: 16px;
-    margin-bottom: 16px;
+    margin-top: 10px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+}
+
+.detail .p-price {
+    margin-top: 10px;
+    margin-bottom: 13px;
 }
 
 .detail .button {
     display: inline-block;
     margin: 0;
-    padding-top: 6px;
+    padding-top: 4px;
     font: inherit;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
     color: var(--basic-white);
     background-color: var(--basic-blue);
     border: none;
@@ -973,14 +1009,14 @@ input[type="radio"].visually-hidden {
 
 .detail .button-detail {
     width: 110px;
-    height: 27px;
-    margin-right: 6px;
+    height: 23px;
+    margin-right: 3px;
 }
 
 .detail .button-book {
     background-color: var(--form-hotel);
     width: 142px;
-    height: 27px;
+    height: 23px;
 }
 
 .detail .button-detail:hover {
@@ -1000,25 +1036,32 @@ input[type="radio"].visually-hidden {
     background-color: var(--active-hotel);
     color: var(--button-opacity);
 }
-.rating svg {
-    margin-top: 28px;
-    margin-right: 6px;
+
+.rating-svg {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.rating .last {
-    margin-right: 71px;
+.rating {
+    margin-right: 67px;
+    margin-top: 2px;
 }
+
+.rating svg {
+    margin-top: 28px;
+    margin-right: 4px;
+}
+
 
 .rating p {
     width: 110px;
     height: 27px;
     text-align: center;
     margin-top: 45px;
-    margin-right: 73px;
+    margin-right: 4px;
     padding-top: 5px;
     color: var(--font-rating);
     background-color: var(--color-rating);
-
 }
 
 
@@ -1029,29 +1072,33 @@ input[type="radio"].visually-hidden {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    margin: 0;
     padding: 0;
     text-align: center;
     background-color: var(--background-footer);
-    display: flex;
+}
+
+.footer {
+    z-index: 3;
+    position: relative;
+    top: 415px;
 }
 
 .telephone-number {
-    margin-top: 25px;
-    margin-left: 111px;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
 .telephone-number p {
-    margin: 0px;
+    margin-top: 22px;
+    margin-left: 70px;
+    margin-bottom: 10px;
 }
 
 .telephone-number a {
+    display: inline-block;
     font: inherit;
     color: var(--basic-black);
-    margin: 0px;
-    margin-top: 9px;
+    margin-left: 72px;
 }
 
 .social {
@@ -1095,16 +1142,15 @@ input[type="radio"].visually-hidden {
 .assist {
     display: flex;
     line-height: 26px;
-    margin: 0px;
+    margin-left: 65px;
 }
 
 .assist p {
-    margin-top: 49px;
+    margin-top: 48px;
 }
 .assist .logotype {
     margin-left: 8px;
     margin-top: 38px;
-    margin-right: 138px;
     color: var(--basic-white);
     background-color: transparent;
     border: none;
