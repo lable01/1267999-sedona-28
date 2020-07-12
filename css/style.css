@@ -477,7 +477,7 @@ input[type="radio"].visually-hidden {
 }
 
 .search-form label {
-    display: inline-block;
+    display: block;
     margin-left: 0px;
     margin-top: 10px;
     margin-right: 16px;
@@ -979,6 +979,7 @@ input[type="radio"].visually-hidden {
 
 .detail p {
     display: inline-block;
+    vertical-align: middle;
     width: 100px;
     margin: 0;
     color: var(--light-font);
@@ -997,6 +998,7 @@ input[type="radio"].visually-hidden {
 
 .detail .button {
     display: inline-block;
+    align-items: middle;
     margin: 0;
     padding-top: 4px;
     font: inherit;
@@ -1103,7 +1105,7 @@ input[type="radio"].visually-hidden {
 }
 
 .telephone-number a {
-    display: inline-block;
+    display: block;
     font: inherit;
     color: var(--basic-black);
     margin-left: 72px;
