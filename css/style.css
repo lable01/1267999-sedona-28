@@ -84,6 +84,10 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-white);
 }
 
+.layer-sedona {
+    z-index: 2;
+}
+
 .background-shadow {
     box-shadow: 0px 5px 15px var(--box-shadow);
 }
@@ -103,7 +107,7 @@ input[type="radio"].visually-hidden {
 
 /*Main-header*/
 .header-inner {
-    min-height: 70px;
+    min-height: 50px;
     margin: 0px;
     padding: 0px;
     z-index: 1;
@@ -128,12 +132,13 @@ input[type="radio"].visually-hidden {
     list-style: none;
     font-weight: 700;
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .logo-inner {
     position: absolute;
-    left: 606px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -170,12 +175,6 @@ input[type="radio"].visually-hidden {
 }
 
 /* Welcome sedona*/
-.layer-sedona {
-    position: absolute;
-    z-index: 2;
-    top: 55px;
-}
-
 .background {
     background-position: top center;
     background-repeat: no-repeat;
@@ -404,7 +403,7 @@ input[type="radio"].visually-hidden {
 }
 
 .interest {
-    min-height: 291px;
+    min-height: 234px;
     text-align: center;
     z-index: 1;
     max-width: 435px;
@@ -471,8 +470,8 @@ input[type="radio"].visually-hidden {
 
 .search-form .date {
     position: relative;
-    display: block;
-    width: 450px;
+    display: flex;
+    width: 459px;
     margin: 0px;
     margin-left: 55px;
 }
@@ -480,6 +479,8 @@ input[type="radio"].visually-hidden {
 .search-form label {
     display: inline-block;
     margin-left: 0px;
+    margin-top: 10px;
+    margin-right: 16px;
     width: 101px;
 }
 
@@ -494,6 +495,7 @@ input[type="radio"].visually-hidden {
 .date .element-date {
     width: 340px;
     height: 38px;
+    padding-left: 10px;
     font: inherit;
     border: 0px;
     background-color: var(--color-rating);
@@ -504,28 +506,28 @@ input[type="radio"].visually-hidden {
 
 .calendar {
     position: absolute;
-    top: 7px;
-    right: 9px;
+    top: 8px;
+    right: 4px;
 }
 .search-form .number {
     position: relative;
-    display: block;
+    display: flex;
     width: 225px;
     margin: 0px;
     margin-left: 55px;
-    margin-top: 30px;
+    margin-top: 29px;
 }
 
 
 .search-form .children-number {
-    display: block;
+    display: flex;
     width: 179px;
-    margin-left: 50px;
+    margin-left: 54px;
     margin-right: 55px;
 }
 
 .number .label-children {
-    width: 62px;
+    width: 64px;
 }
 
 .search .element-number {
@@ -542,13 +544,13 @@ input[type="radio"].visually-hidden {
 .number .minus {
     position: absolute;
     top: 7px;
-    right: 86px;
+    right: 83px;
 }
 
 .number .plus {
     position: absolute;
     top: 11px;
-    right: 12px;
+    right: 9px;
 }
 
 .search .element-date:hover {
@@ -587,11 +589,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
-.map {
-    position: absolute;
-    top: 234px;
-    z-index: 2;
-}
 /* Button */
 .button {
     font: inherit;
@@ -625,15 +622,11 @@ input[type="radio"].visually-hidden {
     margin: 0 auto;
     margin-top: 54px;
     margin-bottom: 55px;
-
 }
-
 
 /* Search-catalog */
 .layer-hotels {
-    position: absolute;
     z-index: 2;
-    top: 55px;
 }
 
 
@@ -692,37 +685,37 @@ input[type="radio"].visually-hidden {
     margin-left: -40px;
     width: 23px;
     height: 23px;
-    background-image: url(/img/checkbox-off.svg);
+    background-image: url(../img/checkbox-off.svg);
 }
 
 .check-input:checked + .check-box {
     width: 27px;
     height: 23px;
-    background-image: url(/img/checkbox-on.svg);
+    background-image: url(../img/checkbox-on.svg);
 }
 
 .check-box:focus,
 .check-box:hover {
-    background-image: url(/img/checkbox-off-hover.svg);
+    background-image: url(../img/checkbox-off-hover.svg);
 }
 
 .check-input:checked:focus + .check-box,
 .check-input:checked:hover + .check-box, {
-    background-image: url(/img/checkbox-on-hover.svg);
+    background-image: url(../img/checkbox-on-hover.svg);
 }
 
 .check-input:disabled + .check-box {
-    background-image: url(/img/checkbox-off-disabled.svg);
+    background-image: url(../img/checkbox-off-disabled.svg);
 }
 
 .check-input:checked:disabled + .check-box {
-    background-image: url(/img/checkbox-on-disabled.svg);
+    background-image: url(../img/checkbox-on-disabled.svg);
 }
 
 /*Filter item*/
 .filter-item {
     position: relative;
-    margin: 0;
+    top: 2px;
     margin-left: 100px;
     padding: 0;
     border: none;
@@ -734,7 +727,7 @@ input[type="radio"].visually-hidden {
 }
 
 .price-controls label {
-    margin-top: -2px;
+    margin-top: 0px;
     margin-left: 65px;
 }
 
@@ -744,7 +737,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls input {
     width: 60px;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     border: none;
     border-radius: 5px;
@@ -811,10 +804,20 @@ input[type="radio"].visually-hidden {
     bottom: 22px;
 }
 
+.price-controls .min-price::after {
+    content: "";
+    height: 22px;
+    width: 2px;
+    display: block;
+    background: var(--basic-white);
+    position: absolute;
+    top: 39px;
+    left: 159px;
+}
 
 .filter-item .show {
     margin-left: 85px;
-    margin-top: -0px;
+    margin-top: 2px;
     font: inherit;
     text-transform: uppercase;
     background-color: transparent;
@@ -963,6 +966,7 @@ input[type="radio"].visually-hidden {
     font-weight: 700;
     font-size: 21px;
     line-height: 26px;
+    color: var(--basic-black);
 }
 
 .detail h2:hover {
@@ -1068,6 +1072,8 @@ input[type="radio"].visually-hidden {
 
 /* Footer-inner*/
 .footer-inner {
+    width:1200px;
+    margin: 0 auto;
     min-height: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1079,8 +1085,10 @@ input[type="radio"].visually-hidden {
 
 .footer {
     z-index: 3;
-    position: relative;
-    top: 415px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .telephone-number {
