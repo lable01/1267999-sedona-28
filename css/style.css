@@ -19,6 +19,7 @@
     --box-shadow:  rgba(0, 1, 1, 0.2);
     --background-other: #EEEEEE;
     --background-footer: rgba(255, 255, 255, 0.9);
+    --background-shadow: rgba(0, 0, 0, 0.25);
 }
 
 @font-face {
@@ -40,7 +41,7 @@
 /* Global */
 
 body {
-    min-width: 1280px; 
+    min-width: 1200px; 
     margin: 0;
     padding: 0;
     font-family: "ptsans", Arial, sans-serif;
@@ -184,6 +185,7 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/background-photo.png);
     width: 1200px;
     height: 509px;
+    object-fit: cover;
 }
 
 .welcome-sedona {
@@ -197,7 +199,17 @@ input[type="radio"].visually-hidden {
     top: 78px;
 }
 
+.background-inner::after {
+    position: absolute;
+    content: "";
+    width: 1200px;
+    height: 57px;
+    top: 507px;
+    background-size: cover;
+    background-image: url(../img/background-pattern.svg);
+    box-shadow: 0px 4px 4px var(--background-shadow);
 
+}
 
 /* Reasons */
 .reasons {
