@@ -40,7 +40,8 @@
 
 /* Global */
 body {
-    min-width: 1200px; 
+    min-width: 1200px;
+    background-color: var(--fields-color); 
     margin: 0;
     padding: 0;
     font-family: "ptsans", Arial, sans-serif;
@@ -192,7 +193,7 @@ input[type="radio"].visually-hidden {
     position: relative;
 }
 
-.welcome-sedona a {
+.welcome-sedona img {
     position: absolute;
     left: 372px;
     top: 78px;
@@ -251,7 +252,8 @@ input[type="radio"].visually-hidden {
     font-size: 21px;
     font-weight: 700;
     color: var(--basic-white);
-    width: 150px;
+    width: 152px;
+    padding: 0;
     margin-left: 125px;
     margin-top: 46px;
 }
@@ -291,7 +293,7 @@ input[type="radio"].visually-hidden {
 }
 
 .words .p-two {
-    width: 302px;
+    width: 307px;
     margin-left: 49px;
     margin-top: 24px;
 }
@@ -407,6 +409,10 @@ input[type="radio"].visually-hidden {
     padding: 0px;
 }
 
+.other .p-two-road {
+    width: 266px;
+}
+
 /* Interest*/
 .layer {
     position: relative;
@@ -414,7 +420,7 @@ input[type="radio"].visually-hidden {
 }
 
 .interest {
-    min-height: 234px;
+    min-height: 233px;
     text-align: center;
     z-index: 1;
     max-width: 435px;
@@ -511,9 +517,7 @@ input[type="radio"].visually-hidden {
     border: 0px;
     background-color: var(--color-rating);
     text-transform: uppercase;
-  }
-
-
+}
 
 .calendar {
     position: absolute;
@@ -554,14 +558,14 @@ input[type="radio"].visually-hidden {
 
 .number .minus {
     position: absolute;
-    top: 7px;
-    right: 83px;
+    top: 8px;
+    right: 82px;
 }
 
 .number .plus {
     position: absolute;
-    top: 11px;
-    right: 9px;
+    top: 12px;
+    right: 7px;
 }
 
 .search .element-date:hover {
@@ -675,8 +679,8 @@ input[type="radio"].visually-hidden {
 }
 
 .list-catalog .item {
-    margin-top: 24px;
-    padding-left: -5px;
+    margin-top: 25px;
+    padding-left: 2px;
 }
 
 .item .check {
@@ -725,8 +729,7 @@ input[type="radio"].visually-hidden {
 
 /*Filter item*/
 .filter-item {
-    position: relative;
-    top: 2px;
+    top: 3px;
     margin-left: 100px;
     padding: 0;
     border: none;
@@ -734,16 +737,17 @@ input[type="radio"].visually-hidden {
 
 .price-controls {
     display: flex;
+    position: relative;
     border: 2px solid var(--basic-white);
 }
 
 .price-controls label {
-    margin-top: 0px;
-    margin-left: 65px;
+    margin-top: 1px;
+    margin-left: 66px;
 }
 
 .price-controls .max-price {
-    margin-left: 74px;
+    margin-left: 83px;
 }
 
 .price-controls input {
@@ -758,17 +762,31 @@ input[type="radio"].visually-hidden {
     font-size: inherit;
 }
 
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .input-max-price {
-    margin-left: -18px;
+    margin-left: -24px;
 }
 
 .input-min-price {
-    margin-left: -28px;
+    margin-left: -34px;
 }
+
 
 .range-filter {
     width: 316px;
-    margin-top: 10px;
+    margin-top: 11px;
 }
 
 .range-controls {
@@ -822,8 +840,8 @@ input[type="radio"].visually-hidden {
     display: block;
     background: var(--basic-white);
     position: absolute;
-    top: 39px;
-    left: 159px;
+    top: 5px;
+    left: 157px;
 }
 
 .filter-item .show {
@@ -1099,7 +1117,8 @@ input[type="radio"].visually-hidden {
 .footer {
     z-index: 3;
     position: absolute;
-    bottom: 0;
+    object-fit: cover;
+    bottom: 6px;
     left: 0;
     right: 0;
 }
