@@ -142,11 +142,13 @@ input[type="radio"].visually-hidden {
     transform: translateX(-50%);
 }
 
+.list .item {
+    padding: 14px 20px;
+}
 
 .item a {
     color: var(--basic-black);
     display: flex;
-    padding: 14px 20px;
 }
 
 .list .item:nth-child(-n+2) {
