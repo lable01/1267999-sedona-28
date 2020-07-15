@@ -206,8 +206,6 @@ input[type="radio"].visually-hidden {
     top: 507px;
     background-size: cover;
     background-image: url(../img/background-pattern.svg);
-    box-shadow: 0px 4px 4px var(--background-shadow);
-
 }
 
 /* Reasons */
