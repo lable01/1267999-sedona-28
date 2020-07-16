@@ -79,8 +79,8 @@ input[type="radio"].visually-hidden {
 /*Wrapper*/
 .wrapper {
     min-width: 1200px;
-    margin: 0 auto;
     padding: 0 40px;
+    margin: 0 auto;
 }
 
 .layer-sedona {
@@ -127,11 +127,12 @@ input[type="radio"].visually-hidden {
 .list {
     display: flex;
     flex-wrap: wrap;
-    padding: 1px 71px;
     margin: 0;
     font-weight: 700;
     width: 100%;
     list-style: none;
+    width: 1200px;
+    padding-left: 0;
 }
 
 .logo-inner {
@@ -152,6 +153,10 @@ input[type="radio"].visually-hidden {
 .list .item:nth-child(4n),
 .list .item:nth-child(4n-1) {
     text-align: right;
+}
+
+.list .item:nth-child(4n-3) {
+    margin-left: 73px;
 }
 
 .list .item:nth-child(4n-2) {
@@ -1101,7 +1106,6 @@ input[type=number]::-webkit-outer-spin-button {
 /* Footer-inner*/
 .footer-inner {
     width:1200px;
-    margin: 0 auto;
     min-height: 120px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1116,8 +1120,8 @@ input[type=number]::-webkit-outer-spin-button {
     position: absolute;
     object-fit: cover;
     bottom: 6px;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .telephone-number {
